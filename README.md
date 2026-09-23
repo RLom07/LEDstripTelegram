@@ -171,7 +171,7 @@ De for-loop gaat langs alle nieuwe berichten. `bot.messages[i].text` is de tekst
 
 ## Stap 6: Een eigen antwoord terugsturen
 
-Volgens de beschrijving van de docent pas je nu het antwoord van de bot aan. Ik wilde dat de bot "Welcome on board captain, all systems online!" terugstuurt.
+Ik wilde dat de bot "Welcome on board captain, all systems online!" terugstuurt.
 
 ### ❌ Fout 2: De bot stuurt helemaal niets terug
 
