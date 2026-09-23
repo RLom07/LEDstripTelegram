@@ -30,8 +30,6 @@ De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien 
 | 4 | "Unknown command" door een hoofdletter | [Stap 7](#stap-7-de-ingebouwde-led-aansturen-met-commandos) |
 | 5 | Het lampje op het board gaat aan, de ledstrip niet | [Stap 8](#stap-8-de-ledstrip-koppelen) |
 | 6 | Bot antwoordt, maar de ledstrip doet niets (`digitalWrite` op een NeoPixel) | [Stap 8](#stap-8-de-ledstrip-koppelen) |
-| 7 | Disco-modus stopt niet (variabele opnieuw aangemaakt) | [Stap 9](#stap-9-disco-modus) |
-| 8 | Disco-animatie beweegt niet (code in de verkeerde functie) | [Stap 9](#stap-9-disco-modus) |
 
 > [!WARNING]
 > Je bot-token is een wachtwoord. Iedereen die het token heeft, kan jouw bot besturen. Zet het nooit in een openbare repository en maak het onleesbaar op screenshots. Is dat toch gebeurd? Stuur `/revoke` naar BotFather en gebruik het nieuwe token.
@@ -463,41 +461,6 @@ if (discoModus && millis() - laatsteDiscoStap > 100)
 
 `ColorHSV` kiest een willekeurige tint op de kleurencirkel, zodat je altijd felle kleuren krijgt en nooit bijna zwart.
 
-### ❌ Fout 7: Disco-modus stopt niet
-
-**Wat stond er in mijn code:** bij "lights on" en "lights off" had ik `bool discoModus = false;` gezet.
-
-![bool discoModus in de if](images/Screenshot%202026-09-23%20201659.png)
-
-**Oorzaak:** door het woord `bool` ervoor maak je een **nieuwe, lokale** variabele aan met toevallig dezelfde naam. Die bestaat alleen binnen dat `if`-blok. De globale `discoModus` bovenaan blijft `true`, dus de disco blijft draaien en overschrijft meteen je "lights on" of "lights off". De compiler geeft hier geen foutmelding over.
-
-**✅ Oplossing:** haal `bool` weg, zodat je de bestaande variabele aanpast:
-
-```cpp
-discoModus = false;
-```
-
-### ❌ Fout 8: De disco-animatie beweegt niet
-
-**Wat stond er in mijn code:** het animatieblok stond binnen de for-loop van `handleNewMessages`, in plaats van in `loop()`. Je ziet het aan de inspringing.
-
-![Disco-code in de verkeerde functie](images/Screenshot%202026-09-23%20201832.png)
-
-**Oorzaak:** `handleNewMessages` wordt alleen aangeroepen als er een nieuw bericht binnenkomt. De kleuren veranderen dan maar één keer per bericht, in plaats van continu.
-
-**✅ Oplossing:** knip het blok uit en plak het onderaan in `loop()`, na het blok dat berichten ophaalt.
-
-> **Waarom `millis()` en geen `delay()`?** Met `while (true) { ...; delay(100); }` werkt de disco wel, maar komt je code nooit meer bij `bot.getUpdates()`. De bot reageert dan niet meer op "lights off". `millis()` kijkt alleen hoeveel tijd er verstreken is, zonder de rest van de code te blokkeren.
->
-> **Bekende beperking:** de animatie hapert af en toe even. Dat komt doordat `bot.getUpdates()` de NodeMCU kort bezighoudt terwijl hij Telegram checkt. Met een hogere `BOT_MTBS` (bijvoorbeeld 3000) wordt dat minder, maar dan reageert de bot trager.
-
-**✅ Resultaat:**
-
-![Disco-commando in Telegram](images/WhatsApp%20Image%202026-09-23%20at%2020.22.54%20%286%29.jpeg)
-
-![Disco-modus op de strip](images/WhatsApp%20Image%202026-09-23%20at%2020.22.54%20%287%29.jpeg)
-
----
 
 ## De volledige eindcode
 
