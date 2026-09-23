@@ -9,7 +9,7 @@ Laatst bijgewerkt: 23 september 2026
 
 In deze manual leer je hoe je een NodeMCU (ESP8266) bestuurt via Telegram. Je maakt een eigen Telegram-bot en stuurt daar berichten naar vanaf je telefoon. De NodeMCU leest die berichten, stuurt een antwoord terug en zet een ledstrip aan, uit of in disco-modus.
 
-Ik volg hiervoor de beschrijving van de docent ([Telegram Adafruit ESP8266](https://icthva.sharepoint.com/:w:/s/FDMCI_ORG__CMD-Amsterdam/Eb7Jd27yWphMuVFbMHV_9WoBEg5_zqAQilsb6Q3gPSKueg?e=f5PM7l)). De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien wat ik zag, wat de oorzaak was, hoe ik daarachter kwam en hoe je het oplost.
+De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien wat ik zag, wat de oorzaak was, hoe ik daarachter kwam en hoe je het oplost.
 
 ### Wat heb je nodig?
 
