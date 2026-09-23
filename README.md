@@ -647,7 +647,7 @@ void loop()
 
 ## Bronnen
 
-- Docent HvA CMD. *Telegram Adafruit ESP8266* (beschrijving ToDo 4). [SharePoint](https://icthva.sharepoint.com/:w:/s/FDMCI_ORG__CMD-Amsterdam/Eb7Jd27yWphMuVFbMHV_9WoBEg5_zqAQilsb6Q3gPSKueg?e=f5PM7l)
+- *Telegram Adafruit ESP8266* (beschrijving ToDo 4). [SharePoint](https://icthva.sharepoint.com/:w:/s/FDMCI_ORG__CMD-Amsterdam/Eb7Jd27yWphMuVFbMHV_9WoBEg5_zqAQilsb6Q3gPSKueg?e=f5PM7l)
 - Dekker, K. (2023). *Cheap-Philips-Hue* (voorbeeldmanual). [GitHub](https://github.com/Kvdekker/Cheap-Philips-Hue/blob/main/README.md)
 - Lough, B. *Universal-Arduino-Telegram-Bot* (library en EchoBot-voorbeeld). [GitHub](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
 - Blanchon, B. *ArduinoJson*. [arduinojson.org](https://arduinojson.org)
