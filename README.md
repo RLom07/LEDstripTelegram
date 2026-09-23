@@ -300,7 +300,7 @@ text.trim();         // "lights on " wordt "lights on"
 
 ![toLowerCase en trim](images/Screenshot%202026-09-23%20201040.png)
 
-> **Nog een klassieke fout:** `if (text = "lights on")` met één `=` is geen vergelijking maar een toewijzing. Die is altijd waar. Gebruik altijd `==`.
+> **Nog een klassieke fout:** `if (text = "lights on")` met een `=` is geen vergelijking maar een toewijzing. Die is altijd waar. Gebruik altijd `==`.
 
 ## Stap 8: De ledstrip koppelen
 
