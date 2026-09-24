@@ -304,13 +304,13 @@ text.trim();         // "lights on " wordt "lights on"
 
 Mijn ledstrip zit op pin **D1**.
 
-### ❌ Fout 5: Het lampje op het board gaat aan, de strip niet
+### ❌ Fout 5: De strip blijft uit
 
-**Wat zag ik:** de bot antwoordde "Lights on, captain!", maar alleen het kleine blauwe lampje op de NodeMCU ging aan. De strip bleef uit.
+**Wat zag ik:** de bot antwoordde "Lights on, captain!", De strip bleef uit.
 
-![Blauwe LED op het board brandt, strip is uit](images/WhatsApp%20Image%202026-09-23%20at%2020.22.54%20%281%29.jpeg)
+![Strip is uit](images/WhatsApp%20Image%202026-09-23%20at%2020.22.54%20%281%29.jpeg)
 
-**Oorzaak:** `LED_BUILTIN` is het lampje dat op het board zelf zit (GPIO2, pin D4). De code wist niet dat er iets op D1 zat.
+**Oorzaak:** De code wist niet dat er iets op D1 zat.
 
 **Oplossing:** definieer je eigen pin en gebruik die overal in plaats van `LED_BUILTIN`:
 
@@ -321,8 +321,6 @@ Mijn ledstrip zit op pin **D1**.
 ![LED_PIN gedefinieerd](images/Screenshot%202026-09-23%20195806.png)
 
 ![pinMode met LED_PIN](images/Screenshot%202026-09-23%20195837.png)
-
-Een externe, gewone LED is meestal **niet** active low. Draai HIGH en LOW dus om: HIGH = aan, LOW = uit.
 
 ### ❌ Fout 6: De bot antwoordt, maar de ledstrip doet helemaal niets
 
@@ -604,7 +602,7 @@ void loop()
 ## Wat ik heb geleerd
 
 - **Lees de foutmelding helemaal.** De `note:`-regel bij fout 3 liet precies zien wat de functie verwachtte.
-- **De gevaarlijkste fouten geven geen foutmelding.** Fout 2, 6, 7 en 8 compileerden allemaal prima, maar deden iets anders dan ik dacht. `Serial.println` op de juiste plekken helpt om te zien waar het misgaat.
+- **De gevaarlijkste fouten geven geen foutmelding.** Fout 2, 6 compileerden allemaal prima, maar deden iets anders dan ik dacht. `Serial.println` op de juiste plekken helpt om te zien waar het misgaat.
 - **Vergelijk met iets wat wel werkt.** Fout 6 vond ik door mijn code te vergelijken met een eerdere opdracht waarin dezelfde strip wel werkte.
 - **Hardware bepaalt de code.** Een NeoPixel-strip is geen gewone LED, en een ingebouwde LED werkt omgekeerd (active low).
 
