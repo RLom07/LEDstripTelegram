@@ -14,8 +14,8 @@ De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien 
 ### Wat heb je nodig?
 
 1. NodeMCU 1.0 (ESP-12E), in mijn geval een LoLin V3
-2. Een NeoPixel-ledstrip (WS2812B) met 16 LEDs, aangesloten met drie draden: data (geel) op **D1**, plus (rood) aangesloten op 3v en GND (zwart) op g
-3. Een micro-USB-kabel
+2. Een NeoPixel-ledstrip, aangesloten met drie draden: data (geel) op **D1**, plus (rood) aangesloten op 3v en GND (zwart) op g
+3. Een micro USB kabel
 4. [Arduino IDE](https://www.arduino.cc/en/software) (versie 2.3.10 in mijn geval) met het ESP8266-board geïnstalleerd
 5. Telegram op je telefoon
 6. Een **2,4 GHz**-wifinetwerk, bijvoorbeeld de hotspot van je telefoon
