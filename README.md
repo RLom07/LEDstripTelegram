@@ -7,7 +7,7 @@ Laatst bijgewerkt: 23 september 2026
 
 ## Introductie
 
-In deze manual leer je hoe je een NodeMCU (ESP8266) bestuurt via Telegram. Je maakt een eigen Telegram-bot en stuurt daar berichten naar vanaf je telefoon. De NodeMCU leest die berichten, stuurt een antwoord terug en zet een ledstrip aan, uit of in disco-modus.
+In deze manual leer je hoe je een NodeMCU (ESP8266) bestuurt via Telegram. Je maakt een eigen Telegram bot en stuurt daar berichten naar vanaf je telefoon. De NodeMCU leest die berichten, stuurt een antwoord terug en zet een ledstrip aan, uit of in disco modus.
 
 De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien wat ik zag, wat de oorzaak was, hoe ik daarachter kwam en hoe je het oplost.
 
@@ -16,7 +16,7 @@ De focus van deze manual ligt op **wat er misging**. Bij elke fout laat ik zien 
 1. NodeMCU 1.0 (ESP-12E), in mijn geval een LoLin V3
 2. Een NeoPixel-ledstrip (WS2812B) met 16 LEDs, aangesloten met drie draden: data (geel) op **D1**, plus (rood) aangesloten op 3v en GND (zwart) op g
 3. Een micro-USB-kabel
-4. [Arduino IDE](https://www.arduino.cc/en/software) (ik gebruik versie 2.3.10) met het ESP8266-board geïnstalleerd
+4. [Arduino IDE](https://www.arduino.cc/en/software) (versie 2.3.10 in mijn geval) met het ESP8266-board geïnstalleerd
 5. Telegram op je telefoon
 6. Een **2,4 GHz**-wifinetwerk, bijvoorbeeld de hotspot van je telefoon
 
